@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Component } from 'react';
-import logo from '../logo.svg';
+import { useRef } from 'react';
 import './App.css';
 import Post from './post/Post';
+import Header from './header/Header';
+import AddPostForm from "./addPostForm/AddPostForm";
 
 interface Column {
     title: string;
@@ -11,16 +12,16 @@ interface Column {
 }
 
 interface ComponentStates {
-    title: string;
     posts: Column[];
 
 }
 
- class App extends React.Component<{}, ComponentStates> {
+class App extends React.Component<{}, ComponentStates> {
+    private firstRef: React.RefObject<unknown>;
      constructor(props: any) {
          super(props);
+         this.firstRef = React.createRef();
          this.state = {
-             title: "Красивое название",
              posts: [
                  { title: "Title #1", description: "Description #1", datePost: "25/10/2022" },
                  { title: "Title #2", description: "Description #2", datePost: "26/10/2022" },
@@ -33,13 +34,16 @@ interface ComponentStates {
      render() {
         return (
                 <div className="App">
+                    <Header />
                     <div className="wrapper">
                         {this.state.posts.map((item, i) =>
                             <Post title={item.title} description={item.description} date={item.datePost}/>
                         )}
                     </div>
+                    <hr/>
+                    <AddPostForm />
                 </div>
-                )
+        )
     }
 }
 

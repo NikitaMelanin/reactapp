@@ -1,0 +1,13 @@
+.header_main {
+    margin: 0 auto;
+    padding: 0;
+    height: 60px;
+}
+
+.header_border {
+    height: 100%;
+    padding: 10px;
+    width: 75%;
+    margin: 0 auto;
+    background: #a4a4a4;
+}
