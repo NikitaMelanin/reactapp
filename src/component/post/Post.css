@@ -2,5 +2,20 @@
     border: 1px solid #a4a4a4;
     padding: 4px;
     border-radius: 7px;
-    width: 25%;
+    margin: 5px;
+}
+
+.post_content {
+    text-align: center;
+}
+
+.post_date {
+    text-align: right;
+    margin-bottom: 4px;
+    margin-right: 25px;
+}
+
+.post_date p {
+    font-size: 12px;
+
 }

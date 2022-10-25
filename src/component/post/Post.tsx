@@ -1,15 +1,27 @@
 import React from 'react';
 import './Post.css';
 
-function Post() {
+interface Props {
+    title: string;
+    description: string;
+    date: string
+}
+
+const Post = ({ title, description, date }: Props) => {
     return (
         <div>
             <div className={'border'}>
-                <h1>Post title</h1>
+                <h1>{ title }</h1>
                 <hr/>
-                <p>Post description</p>
-            </div>
+                <div className={'post_content'}>
+                    <p>{ description }</p>
+                </div>
 
+                <hr/>
+                <div className={'post_date'}>
+                    <p>{ date }</p>
+                </div>
+            </div>
         </div>
     );
 }
