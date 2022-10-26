@@ -5,8 +5,14 @@
     margin: 5px;
 }
 
-.post_content {
+.post_header {
     text-align: center;
+    font-family: Yrsa Light;
+}
+
+.post_content {
+    text-align: justify;
+    padding: 0 15px;
 }
 
 .post_date {
