@@ -46,6 +46,7 @@ export function CreateProduct ({onCreate}: CreateProductProps) {
    }
    return (
    <form onSubmit={submitHandler}>
+      Форма пока не работает)
       <input 
          type="text" 
          className='border py-2 px-4 mb-2 w-full outline-0'
@@ -53,6 +54,18 @@ export function CreateProduct ({onCreate}: CreateProductProps) {
          value = {value}
          onChange = {changeHandler}
          />
+
+      <input
+          type="text"
+          className='border py-2 px-4 mb-2 w-full outline-0'
+          placeholder='Enter product description product'
+      />
+
+      <input
+          type="text"
+          className='border py-2 px-4 mb-2 w-full outline-0'
+          placeholder='Insert image url'
+      />
       
       {error && <Error error = {error} />}
       <button type="submit" className='py-2 px-4 border bg-yellow-400 hover:text-white'>Create</button>

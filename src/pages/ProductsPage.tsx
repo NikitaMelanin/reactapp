@@ -8,10 +8,11 @@ import { useContext, useState } from 'react';
 import { IProduct } from '../models';
 import { ModalContext } from '../context/ModalContext';
 
+
 export function ProductsPage () {
 
    const {loading, products, error, addProduct} = useProducts()
-const { modal, open, close} =  useContext(ModalContext)
+    const { modal, open, close} =  useContext(ModalContext)
 
 const createHandler = (product: IProduct) => {
   addProduct(product)
@@ -25,6 +26,9 @@ const createHandler = (product: IProduct) => {
     {/* <Product product = {products[0]} /> 
     <Product product = {products[1]} />
     <Product product = {products[2]} /> */}
+      <div className={"main_content"}>
+
+      </div>
     {modal && <Modal title="Create new product" onClose={close}>
       <CreateProduct onCreate={createHandler}/>
       
