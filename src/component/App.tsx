@@ -30,18 +30,26 @@ class App extends React.Component<{}, ComponentStates> {
          };
      }
 
+     addPost(post: Column) {
+         this.state.posts.push(post);
+     }
 
      render() {
         return (
-                <div className="App">
+                <div>
+                    <div className="App">
                     <Header />
+                    <div className={'otstup'}></div>
                     <div className="wrapper">
                         {this.state.posts.map((item, i) =>
                             <Post title={item.title} description={item.description} date={item.datePost}/>
                         )}
                     </div>
                     <hr/>
-                    <AddPostForm />
+                    </div>
+                    <div className={'form_box'}>
+                        <AddPostForm addPost={this.addPost}/>
+                    </div>
                 </div>
         )
     }

@@ -2,3 +2,13 @@
     display: grid;
     grid-template-columns: 24% 24% 24%;
 }
+
+.otstup {
+    margin: 20px 0;
+}
+
+.form_box {
+    width: 700px;
+    float: right;
+    margin-right: 100px;
+}

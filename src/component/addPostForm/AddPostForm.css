@@ -1,0 +1,43 @@
+.form {
+    float: right;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.float_right {
+    float: left;
+    width: 400px;
+}
+
+
+.form div {
+    margin-bottom: 30px;
+}
+
+
+.form input {
+    padding: 20px 17px;
+    border: #a4a4a4 1px solid;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+.align_center {
+    padding: 9px 15px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0.18949586670605745) 0%, rgba(9,9,121,0.14467793953518904) 43%, rgba(255,0,183,0.18669474625787819) 100%);
+    border-radius: 7px;
+    border: 0px solid;
+}
+
+.align_center:hover {
+    cursor: pointer;
+}
+
+.width_max {
+    text-align: center;
+    clear: both;
+    width: 100%;
+}
