@@ -9,11 +9,15 @@ interface Column {
     datePost: string;
 }
 
+interface FormProps {
+    addPost: Function;
+}
+
 function createPost(inputTitle: string, inputDescription: string, inputDate: string): Column {
     return {title: inputTitle, description: inputDescription,datePost: inputDate}
 }
 
-export default function AddPostForm(addPost: any) {
+export default function AddPostForm(porps: FormProps) {
     const [title, setTitle] = useState(" ");
     const [description, setDescription] = useState(" ");
     const [date, setDate] = useState(" ");
@@ -44,7 +48,7 @@ export default function AddPostForm(addPost: any) {
     };
 
     const handlerClick = () => {
-        addPost(createPost(title, description, date));
+        porps.addPost(createPost(title, description, date));
     }
 
     return (

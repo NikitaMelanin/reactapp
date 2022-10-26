@@ -31,7 +31,9 @@ class App extends React.Component<{}, ComponentStates> {
      }
 
      addPost(post: Column) {
-         this.state.posts.push(post);
+         const tmpPosts = this.state.posts;
+         tmpPosts.push(post);
+         this.setState({posts: tmpPosts});
      }
 
      render() {
